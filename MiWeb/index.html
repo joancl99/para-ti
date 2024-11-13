@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Lucía ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #7ec9f8, #9cc6e0);
+      color: #333;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 90%;
+      background-color: rgba(255, 255, 255, 0.8); /* Mismo color de fondo que el recuadro del PDF */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    button {
+      background-color: #64b7d8;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 1em;
+    }
+
+    button:hover {
+      background-color: #3ba8d3;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #message {
+      font-size: 1.2em;
+      margin-top: 1em;
+    }
+
+    /* Estilo del recuadro del PDF, ahora con el mismo fondo que el contenedor */
+    .pdf-box {
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo igual al de .container */
+      border: 1px solid #64b7d8;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .pdf-box p {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .pdf-box a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #64b7d8;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .pdf-box a:hover {
+      background-color: #3ba8d3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hola mi amor 💖</h1>
+    <p>Este pequeño rinconcito lo he hecho solo para ti, disfrútalo.</p>
+    <button id="clickButton" onclick="revealContent()">Haz clic aquí</button>
+    <p id="message" class="hidden">Eres lo mejor que me ha pasado mi amor.<br><br>Disfruta tus 21 y que sepas que seguirás siendo mi niña <br>por muchos años más que cumplas.❤️<br></p>
+  </div>
+
+  <!-- Recuadro pequeño para descargar el PDF, oculto inicialmente -->
+  <div class="pdf-box hidden" id="pdfLink">
+    <p>He preparado una cosita para ti, espero que te encante tanto como a mí me ha encantado hacerlo ❤️</p>
+    <a href="Como me enamoré de ti.pdf" download="Sorpresa.pdf">Descargar📄</a>
+  </div>
+
+  <script>
+    function revealContent() {
+      // Obtener el mensaje, el recuadro del PDF y el botón
+      const message = document.getElementById("message");
+      const pdfLink = document.getElementById("pdfLink");
+      const button = document.getElementById("clickButton");
+
+      // Mostrar el mensaje y el recuadro del PDF
+      message.classList.remove("hidden");
+      pdfLink.classList.remove("hidden");
+
+      // Ocultar el botón
+      button.classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
